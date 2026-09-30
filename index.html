@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3157ff" />
+  <title>SaveWise — Compare. Save. Shop Smarter.</title>
+  <meta name="description" content="SaveWise helps you compare products, prices and shops in one simple place so you can make smarter buying decisions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <a class="logo" href="#">Save<span>Wise</span> ✦</a>
+    <div class="navlinks">
+      <a href="#compare">Compare</a>
+      <a href="#categories">Categories</a>
+      <a href="#shops">Shops</a>
+      <a href="#features">Why SaveWise</a>
+    </div>
+    <button class="navbtn" onclick="notify('SaveWise accounts are coming soon!')">Get Started</button>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <div class="badge">✦ Smarter shopping starts here</div>
+      <h1>Find it.<br><span>Compare it.</span><br>Save money.</h1>
+      <p>
+        SaveWise helps you compare products, prices and shops in one simple place —
+        so you can make smarter buying decisions.
+      </p>
+
+      <div class="search">
+        <input id="searchBox" type="text" placeholder="Search phones, laptops, TVs..." aria-label="Product search" />
+        <button onclick="searchProducts()">Search</button>
+      </div>
+    </div>
+
+    <div class="hero-card" aria-label="Featured deal">
+      <div class="hero-card-top">
+        <div>
+          <div class="mini-label">TODAY'S SMART FIND</div>
+          <b>Best price discovered</b>
+        </div>
+        <div>⚡</div>
+      </div>
+
+      <div class="hero-product">
+        <div class="phone">📱</div>
+        <div class="price-row">
+          <div>
+            <div class="mini-label">Smartphone</div>
+            <b>Example Phone Pro</b>
+          </div>
+          <div style="text-align:right">
+            <div class="price">LKR 0</div>
+            <div class="save">Demo price</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="section-head">
+      <div>
+        <h2>Shop by category</h2>
+        <p>Find what you're looking for faster.</p>
+      </div>
+    </div>
+
+    <div class="categories">
+      <button class="cat" onclick="pick('Phones')"><div class="cat-icon">📱</div><b>Phones</b></button>
+      <button class="cat" onclick="pick('Laptops')"><div class="cat-icon">💻</div><b>Laptops</b></button>
+      <button class="cat" onclick="pick('Gaming')"><div class="cat-icon">🎮</div><b>Gaming</b></button>
+      <button class="cat" onclick="pick('TVs')"><div class="cat-icon">📺</div><b>TVs</b></button>
+      <button class="cat" onclick="pick('Audio')"><div class="cat-icon">🎧</div><b>Audio</b></button>
+      <button class="cat" onclick="pick('Accessories')"><div class="cat-icon">⌚</div><b>Accessories</b></button>
+    </div>
+  </section>
+
+  <section class="section" id="compare">
+    <div class="section-head">
+      <div>
+        <h2>Popular comparisons</h2>
+        <p>Demo products — real shop data can be added later.</p>
+      </div>
+    </div>
+
+    <div class="products">
+      <article class="product">
+        <div class="product-img">📱</div>
+        <div class="product-body">
+          <span class="tag">SMARTPHONE</span>
+          <h3>Example Phone Pro</h3>
+          <small>128GB · 5G · AMOLED</small>
+          <div class="compare">
+            <strong>LKR 0</strong>
+            <button onclick="notify('Real price comparison will be added in the next version.')">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">💻</div>
+        <div class="product-body">
+          <span class="tag">LAPTOP</span>
+          <h3>Example Laptop Air</h3>
+          <small>16GB · SSD · Performance</small>
+          <div class="compare">
+            <strong>LKR 0</strong>
+            <button onclick="notify('Real price comparison will be added in the next version.')">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <div class="product-img">🎮</div>
+        <div class="product-body">
+          <span class="tag">GAMING</span>
+          <h3>Example Gaming Setup</h3>
+          <small>Console · Controller · Accessories</small>
+          <div class="compare">
+            <strong>LKR 0</strong>
+            <button onclick="notify('Real price comparison will be added in the next version.')">Compare</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="section-head">
+      <div>
+        <h2>Why SaveWise?</h2>
+        <p>Built around one simple idea: help people shop smarter.</p>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h3>Compare prices</h3>
+        <p>See prices from different shops in one place instead of checking every store separately.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🏪</div>
+        <h3>Discover shops</h3>
+        <p>Find local stores, their products, availability and important buying information.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🔔</div>
+        <h3>Price alerts</h3>
+        <p>Future SaveWise updates can notify users when a product reaches a price they want.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="shops">
+    <div class="section-head">
+      <div>
+        <h2>Featured shops</h2>
+        <p>Local businesses can eventually create their own SaveWise profiles.</p>
+      </div>
+    </div>
+
+    <div class="shops">
+      <div class="shop">
+        <div class="shop-top">
+          <div class="shop-logo">S</div>
+          <div>
+            <b>SaveWise Shop</b><br>
+            <span class="verified">✓ Verified shop</span>
+          </div>
+        </div>
+        <p>Example shop profile. Real businesses can be added after permission.</p>
+        <button onclick="notify('Shop profiles are coming soon!')">View Shop</button>
+      </div>
+
+      <div class="shop">
+        <div class="shop-top">
+          <div class="shop-logo">S</div>
+          <div>
+            <b>Partner Store</b><br>
+            <span class="verified">✓ Verified shop</span>
+          </div>
+        </div>
+        <p>Businesses will be able to display products, prices and stock.</p>
+        <button onclick="notify('Partner shops are coming soon!')">View Shop</button>
+      </div>
+
+      <div class="shop">
+        <div class="shop-top">
+          <div class="shop-logo">+</div>
+          <div>
+            <b>Your Shop?</b><br>
+            <span class="verified">Become a partner</span>
+          </div>
+        </div>
+        <p>Interested shops can eventually apply to join the SaveWise network.</p>
+        <button onclick="notify('Shop registration will be added later.')">Join SaveWise</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div>
+      <h2>Stop searching everywhere.</h2>
+      <p>Compare smarter with SaveWise.</p>
+    </div>
+    <button onclick="notify('SaveWise is being built. Stay tuned!')">Explore SaveWise →</button>
+  </div>
+
+  <footer>
+    <div><b>SaveWise ✦</b><br><small>Compare. Save. Shop Smarter.</small></div>
+    <small>© 2026 SaveWise · Built for smarter shopping</small>
+  </footer>
+
+  <div class="notice" id="notice"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
